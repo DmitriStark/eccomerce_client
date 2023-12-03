@@ -1,0 +1,17 @@
+body {
+  color: white;
+  background-color: black;
+  margin: 0; /* Remove default margin */
+}
+
+.catalog {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh; /* Ensure the catalog takes up the full height of the viewport */
+}
