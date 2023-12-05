@@ -1,65 +1,31 @@
-import Catalog from "./Components/Catalog.";
+import Catalog from "./Components/Catalog";
 import Navbar from "./Components/Navbar";
-import ClickDemo from "./Components/demo/clickDemo";
+import ClicksDemo from "./Components/demo/ClicksDemo";
 import StateDemo from "./Components/demo/StateDemo";
-import { useState } from "react";
+import Counter from "./Components/demo/Counter";
+import ColorForm from "./Components/demo/ColorForm";
+import UserForm from "./Components/demo/UserForm";
+
 function App() {
-  // const style = {
-  //   fontSize: "300px",
-  //   display:"flex",
-  //   alignItems:"center",
-  //   textaling:"center"
-  // };
-
-  return (<>
+  return <>
     <header>
-      <Navbar/>
-      <div className="header12">
-      <h1>Ecommerse</h1>
-
-      </div>
+      <Navbar /> 
+      <h1>Shahar Eccommerce</h1>
     </header>
     <main>
-      <div className="catalog">
-     <Catalog/>
-    </div>
-    <div className="hibur"><Hibur/></div>
-    <div className="button">
-
-     <ClickDemo/>
-    </div>
-    <div className="statedemo">
-      <StateDemo/>
-    </div>
+      {/* <Catalog /> */}
+      {/* <ClicksDemo /> */}
+      {/* <StateDemo /> */}
+      {/* <Counter /> */}
+      {/* <ColorForm /> */}
+      <UserForm />
     </main>
     <footer>
-      <p>all rigth reserve to me</p>
+      <p>
+        all rights reserved to me
+      </p>
     </footer>
-    </>
-    
-  );
+  </>;
 }
 
-
 export default App
-
-
-
-
-     function Hibur(){
-      const [number,setNumber] = useState(0);
-
-      function addtoNumber(){
-        setNumber(number+1)
-      
-      }
-      function takefromNumber(){
-        setNumber(number - 1)
-      }
-
-      return <div>
-        <button onClick={addtoNumber}>+</button>
-        {number}
-        <button onClick={takefromNumber}>-</button>
-      </div>
-     }

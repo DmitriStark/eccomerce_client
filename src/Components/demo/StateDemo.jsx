@@ -1,13 +1,11 @@
 import InfoToggle from "./InfoToggle";
+import { infoList } from "./data";
 
-const info ={
-    title:"my secret",
-    content:"ilike cheese"
+export default function StateDemo() {
+    const infosElements = infoList.map(i =>
+        <InfoToggle key={i.id} info={i} />);
+
+    return <div className="infos">
+        {infosElements}
+    </div>;
 }
-
-export default function StateDemo(){
-    return <div className="demo">
-       <InfoToggle info={info}/>
-    </div>
-}
-

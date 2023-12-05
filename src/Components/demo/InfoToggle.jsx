@@ -1,21 +1,17 @@
-import { useState } from "react"
+import { useState } from "react";
 
+export default function InfoToggle({ info }) {
+    const [isHidden, setIsHidden] = useState(true);
 
-
-
-export default function InfoToggle(props) {
-    const [isHidden, setIsHidden] = useState(false);
-
-    function toggleHidden (){
+    function toggleIsHidden() {
         setIsHidden(!isHidden);
     }
-    const info = props.info;
 
     return <div className="info-toggle">
         <h3>{info.title}</h3>
-        <button onClick={toggleHidden}>{isHidden?"show":"hide"}</button>
-        
-        {isHidden && <p>{info.content}</p>}
-    </div>
+        <button onClick={toggleIsHidden}>
+            {isHidden ? 'show' : 'hide'}
+        </button>
+        {!isHidden && <p>{info.content}</p>}
+    </div>;
 }
-
